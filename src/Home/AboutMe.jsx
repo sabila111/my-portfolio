@@ -1,15 +1,26 @@
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 const AboutMe = () => {
+    
+      useEffect(() => {
+          AOS.init({ duration: 1000 });
+        }, []);
+
     return (
         <div id="about" className="mt-10">
           
-            <h1 className="text-center text-6xl font-bold bg-gradient-to-r from-cyan-500 to-blue-800 text-transparent bg-clip-text">
+            <h1
+             className="text-center text-6xl font-bold bg-gradient-to-r from-cyan-500 to-blue-800 text-transparent bg-clip-text"
+             
+             data-aos="fade-up">
                 About Me
             </h1>
 
           
             <div className="flex flex-col items-center lg:flex-row lg:justify-between gap-10 mt-10">
                 {/* Text Section */}
-                <div className="lg:w-1/2">
+                <div className="lg:w-1/2" data-aos="fade-right">
                     <h1 className="text-5xl font-bold">Hello, I'm</h1>
                     <h1 className="text-5xl font-bold bg-gradient-to-r from-cyan-500 to-blue-800 text-transparent bg-clip-text">
                         Sharmin Sharker
@@ -24,7 +35,9 @@ const AboutMe = () => {
                 </div>
 
               
-                <div className="flex justify-center">
+                <div 
+                className="flex justify-center"
+                data-aos="fade-left">
                     <img className="h-80 w-80 rounded-full object-cover" src="https://i.ibb.co.com/yF1YnqWB/1738753547327.jpg" alt="Sharmin Sharker" />
                 </div>
             </div>

@@ -15,7 +15,7 @@ const Navbar = () => {
   );
 
   return (
-    <div className="flex justify-around md:justify-around lg:justify-between  pt-6 px-3 md:px-5 lg:px-0">
+    <div className="max-w-7xl mx-auto flex justify-around md:justify-around lg:justify-between  pt-6 px-3 md:px-5 lg:px-0 sticky top-0 z-[100] bg-opacity-10 backdrop-blur-md">
       {/* Left Side (Logo) */}
       <div className="navbar-start">
         <a className="text-xl md:text-2xl lg:text-2xl font-bold">
